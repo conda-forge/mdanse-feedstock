@@ -1,5 +1,5 @@
 {% set name = "mdanse" %}
-{% set version = "2.0.0b1" %}
+{% set version = "2.0.0b2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 69da5c46fdb8283cb36922dbc42bba7ed14b1e4ff987e95a1295f0d692f1463d
+  sha256: eaeb2b2716e2e72ed046006f60d428ef1059c1e1c77edbc0c912cc6c157ef296
 
 build:
   skip: true  # [py<39]
   entry_points:
     - mdanse = MDANSE.Scripts.mdanse:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   build:
