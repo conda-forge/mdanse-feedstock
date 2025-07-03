@@ -1,13 +1,13 @@
 {% set name = "mdanse" %}
-{% set version = "2.0.0b2" %}
+{% set version = "2.0.0rc1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: eaeb2b2716e2e72ed046006f60d428ef1059c1e1c77edbc0c912cc6c157ef296
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 50d3fec53543c39f417d12404032deae311a3c54ab5710aa084e7094db9ccec7
 
 build:
   skip: true  # [py<39]
@@ -30,10 +30,14 @@ requirements:
     - sphinx
     - pip
   run:
+    - mdanalysis
+    - mdtraj
+    - more-itertools
+    - networkx
     - numpy
     - python
     - scipy
-    - h5py
+    - h5py >=3.13
     - icecream
     - ase
     - rdkit
