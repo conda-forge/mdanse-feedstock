@@ -1,5 +1,5 @@
 {% set name = "mdanse" %}
-{% set version = "2.0.0rc1" %}
+{% set version = "2.0.0rc2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 50d3fec53543c39f417d12404032deae311a3c54ab5710aa084e7094db9ccec7
+  sha256: a3ad1757bf3eba31c6ed2413cfc35766753b1120cf25ad2e4b19e96fc17d9cb2
 
 build:
   skip: true  # [py<39]
