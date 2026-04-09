@@ -1,5 +1,5 @@
 {% set name = "mdanse" %}
-{% set version = "2.0.0rc2" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a3ad1757bf3eba31c6ed2413cfc35766753b1120cf25ad2e4b19e96fc17d9cb2
+  sha256: 1d71811f1079afedd7c7ff555bcc11ee681d6e0f355e2d15f45a622832156bc1
 
 build:
   skip: true  # [py<39]
   entry_points:
     - mdanse = MDANSE.Scripts.mdanse:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -40,7 +40,7 @@ requirements:
     - h5py >=3.13
     - icecream
     - ase
-    - rdkit
+    - rdkit >=2025.3.3
 
 test:
   imports:
