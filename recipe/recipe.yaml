@@ -40,7 +40,7 @@ requirements:
     - networkx
     - numpy
     - python
-    - scipy
+    - scipy <=1.17.1
     - h5py >=3.13
     - ase
     - rdkit >=2025.3.3
