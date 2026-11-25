@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: mdanse
-  version: 2.0.3
+  version: "2.0.4"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 5541e9cf58fc4ad645f336c797567b54c268e7e233a362bdab79d5df58c86e92
+  sha256: 294f1a93e2e481f830da4d3aca33c42c28044ff261f66031fa825b99087cb382
 
 build:
   number: 0
